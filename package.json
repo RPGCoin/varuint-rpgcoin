@@ -1,0 +1,33 @@
+{
+  "name": "varuint-rpgcoin",
+  "version": "1.0.0",
+  "description": "encode/decode number as rpgcoin variable length integer",
+  "homepage": "https://github.com/rpg-community/varuint-rpgcoin",
+  "bugs": {
+    "url": "https://github.com/rpg-community/varuint-rpgcoin/issues"
+  },
+  "license": "MIT",
+  "author": "silence <silence@rpgcoin.gg>",
+  "files": [
+    "index.js"
+  ],
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rpg-community/varuint-rpgcoin.git"
+  },
+  "scripts": {
+    "coverage": "nyc --check-coverage --branches 100 --functions 100 tape test/*.js",
+    "lint": "standard",
+    "test": "npm run lint && npm run unit",
+    "unit": "tape test/*.js"
+  },
+  "dependencies": {
+    "safe-buffer": "^5.1.1"
+  },
+  "devDependencies": {
+    "nyc": "^11.4.1",
+    "standard": "*",
+    "tape": "^4.5.1"
+  }
+}
